@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة AppCraft | صانع تطبيقات الأنظمة الذكية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="builder-body">
+    <div class="app-builder-container">
+        
+        <aside class="control-panel">
+            <div class="brand">
+                <h1 class="company-phone">للتواصل مع رئيس الشركة واتس (01039040648)</h1>
+                <h2>🛠️ ACP</h2>
+            </div>
+
+            <div class="setting-section">
+                <h3>1. إعدادات النظام الأساسية</h3>
+                <div class="control-group">
+                    <label>اسم النظام التجاري:</label>
+                    <input type="text" id="app-name-input" value="MegaTech System">
+                </div>
+                <div class="control-group">
+                    <label>تعيين كلمة سر النظام للعميل:</label>
+                    <input type="text" id="app-pass-input" value="54321">
+                </div>
+            </div>
+
+            <div class="setting-section">
+                <h3>2. الميزات الفعالة المدمجة</h3>
+                <ul class="features-checklist">
+                    <li>✅ نظام تشفير وحماية الدخول</li>
+                    <li>✅ فلترة سريعة برقم الدرج والاسم</li>
+                    <li>✅ قاعدة بيانات محليّة LocalStorage</li>
+                    <li>✅ نسخ احتياطي وتصدير ملفات الباك أب</li>
+                </ul>
+            </div>
+
+            <button class="btn-generate" onclick="generateAppCode()">🚀 تصدير وإنشاء كود النظام النهائي</button>
+            <a href="index.html" style="text-align: center; margin-top: 10px; color: #7f8c8d; text-decoration: none; font-size: 14px; font-weight: bold;">العودة للرئيسية 🏠</a>
+        </aside>
+
+        <main class="preview-area">
+            <div class="system-simulator">
+                <div id="loginSection" class="simulator-card">
+                    <h1 id="preview-login-title">Login to MegaTech System</h1>
+                    <input id="loginPassword" type="password" placeholder="Enter your password..." disabled>
+                    <button class="btn-demo">Login (معاينة)</button>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

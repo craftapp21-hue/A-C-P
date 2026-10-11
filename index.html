@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- القائمة العلوية -->
+    <header class="navbar">
+        <div class="logo">ACP</div>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="index2.html" class="highlight-link">أسعار الباقات 💰</a></li>
+                <li><a href="index3.html" class="craft-link">منصة ACP 🚀</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>شركة ACP لـ صناعة وتجهيز مخازن الشركات</h1>
+            <p>نصمم ونبني مستودعات ومخازن ذكية، آمنة، ومتكاملة لتستوعب كافة احتياجات أعمالكم وتضمن كفاءة سلاسل الإمداد.</p>
+            <a href="index2.html" class="btn-main">عرض باقات الأسعار</a>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- قسم التواصل المباشر بالواتساب -->
+    <section id="contact" class="contact-section">
+        <h2>ابدأ بتأمين مخزن شركتك الآن</h2>
+        <p>اترك بياناتك وسيتواصل معك فريق المهندسين لدينا في أقرب وقت.</p>
+        <form class="contact-form" id="acpForm">
+            <input type="text" id="clientName" placeholder="اسم الشركة / المسؤول" required>
+            <input type="tel" id="clientPhone" placeholder="رقم الهاتف أو الواتساب الخاص بك" required>
+            <button type="submit" class="btn-submit">إرسال الطلب عبر الواتساب 💬</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 جميع الحقوق محفوظة لشركة ACP لصناعة المخازن.</p>
+    </footer>
+
+    <!-- كود الجافا سكريبت السحري لفتح تطبيق الواتساب مباشرة حتى من الفلاشة -->
+    <script>
+        document.getElementById('acpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('clientName').value;
+            const phone = document.getElementById('clientPhone').value;
+            
+            // رقم الواتساب الخاص بك بالتنسيق الدولي لمصر
+            const myNumber = "201039040648"; 
+            
+            // تجهيز نص الرسالة وتنسيقها
+            const messageText = `السلام عليكم ورحمة الله وبركاته،%0A%0A` +
+                                `يرجى العلم أن هناك طلب تواصل جديد من موقع ACP للمخازن:%0A` +
+                                `👤 *الاسم / الشركة:* ${name}%0A` +
+                                `📞 *رقم هاتف العميل:* ${phone}`;
+            
+            // الرابط المباشر الذي يجبر النظام على فتح تطبيق الواتساب فوراً
+            const whatsappUrl = `whatsapp://send?phone=${myNumber}&text=${messageText}`;
+            
+            // توجيه المتصفح لفتح التطبيق
+            window.location.href = whatsappUrl;
+            
+            this.reset();
+        });
+    </script>
+</body>
+</html>
